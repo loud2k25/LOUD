@@ -58,11 +58,35 @@
       color: #bbb;
       font-family: 'Vogue', Arial, sans-serif;
     }
+
+
+    @media (max-width: 480px) {
+  .coming-soon-container {
+  background: rgba(30, 30, 30, 0.7);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    padding: 3rem 2rem;
+    text-align: center;
+    max-width: 400px;
+    backdrop-filter: blur(8px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* .coming-soon-logo { width: 120px; } */
+  /* .coming-soon-title { font-size: clamp(1.6rem, 6vw, 2.0rem); } */
+  /* .coming-soon-text  { font-size: clamp(0.95rem, 4.5vw, 1.05rem); } */
+  /* .footer { font-size: 0.85rem; } */
+}
+
+
   </style>
 </head>
 <body>
   <div class="coming-soon-container glass curved">
-    <img src="leadlogo.png" alt="LOUD Logo" class="coming-soon-logo" />
+    <img src="Leadlogo.png" alt="LOUD Logo" class="coming-soon-logo" />
     <div class="coming-soon-title">Coming Soon</div>
     <div class="coming-soon-text">
       The LOUD website is under construction.<br>
@@ -74,4 +98,3 @@
   </div>
 </body>
 </html>
-
