@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rules | L MUN | Loyola Union Debate</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vogue&display=swap"
+      rel="stylesheet"
+    />
+
+  </head>
+  
+  <style>
+
+    #code-of-conduct ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    #code-of-conduct ul li{
+        margin-top: 10px;
+    }
+
+    .down-arrow {
+      width: 40px;
+      height: 40px;
+      margin-top: 20px;
+      animation: bounce 2s infinite;
+      opacity: 0.2;
+    }
+
+    @media screen and (max-width: 600px) {
+      .hero-content {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+      }
+      
+    }
+
+  </style>
+  <body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">
+        <img src="../leadlogo.png" alt="LEAD Logo" class="lead-logo" />
+        <div class="lead-text">
+          <h2>LEAD</h2>
+          <p>Loyola Engagement in Advocacy and Diplomacy</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="../INDEX.HTML">Home</a>
+        <a href="../comms/committees.html">Committees</a>
+        <a href="rules.html">Rules</a>
+        <a href="../sec/secretariat.html">Secretariat</a>
+        <a href="../contact/contacts.html">Contact</a>
+      </nav>
+      <div class="register">
+        <a href="https://registrationloud.lovable.app/" target="_blank"
+          ><button class="register-btn">Register</button></a
+        >
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </header>
+
+    <!-- PAGE HERO -->
+    <section class="hero fade-in rules-hero">
+      <div class="hero-content glass curved rules-hero-content">
+        <h1 class="title rules-title">Rules</h1>
+        <p class="subtitle-small rules-subtitle">
+          Please read these carefully before participating in any LOUD event.
+        </p>
+        <img src="../arrow-down-angle-svgrepo-com.svg" class="down-arrow" alt="Downward arrow" />
+      </div>
+    </section>
+
+    <!-- Rules Content -->
+    <main class="content curved glass fade-in rules-main">
+      <section id="general">
+        <h2>General Rules</h2>
+        <ol>
+          
+         
+            <li>
+              The registration fee shall be ₹1200 per delegate.
+            </li>
+            <li>
+              Registrations must be completed exclusively through the official website: [loudext.in].
+                
+            </li>
+            <li>
+              Schools are required to submit a confirmation email listing the names of participants, sent from the institution’s official email address.
+               
+            </li>
+            <li>
+               Each school may register a maximum of six (6) delegates, along with one (1) International Press (IP) member and one (1) Photojournalist.
+            </li>
+            <li>
+              All completed registration forms must be submitted on or before [date to be specified].
+            </li>
+        </ol>
+      </section>
+
+
+      <section id="code-of-conduct">
+        <h2>Code of Conduct</h2>
+        <ul>
+          <li>Any procedural concerns or disputes must be addressed directly to the Chair or the Secretariat.</li>
+          <li>Delegates are expected to demonstrate respect and courtesy towards fellow delegates, the Chairs, and the Secretariat at all times.</li>
+          <li>Delegates must maintain the highest standards of decorum and diplomatic conduct, refraining from personal attacks, hate speech, or the use of profanity.</li>
+        </ul>
+        <p> <br>
+          Violations may result in warnings, disqualification, or reporting to
+          school authorities depending on severity.
+        </p>
+      </section>
+
+      <section id="submission-guidelines">
+        <h2>Dress Code & Sessions Rules</h2>
+        <ol>
+          <li>
+            Delegates are required to attend the conference in formal Western attire or traditional attire, as instructed by their respective committees prior to the event.
+          </li>
+          <li>
+            Punctuality and full attendance at all scheduled sessions are mandatory, unless prior permission for absence has been duly granted.
+          </li>
+          <li>
+            The time limits set by the Chair for speeches, moderated caucuses, and unmoderated caucuses are binding and must be strictly observed.
+          </li>
+        </ol>
+      </section>
+
+    </main>
+
+    <footer class="footer fade-in">
+      <p>© 2025 Loyola Union Debate | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // // Redirect buttons
+function redirect(page) {
+    window.location.href = page;
+  }
+  
+  // Navbar hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.querySelector('.nav-links');
+  
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+  
+  // Fade-in on scroll
+  const faders = document.querySelectorAll('.fade-in');
+  const appearOptions = { threshold: 0.3 };
+  
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('appear');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+  
+  faders.forEach(fader => appearOnScroll.observe(fader));
+
+
+// Copy number function
+function copyNumber(button) {
+  const number = button.previousElementSibling.textContent;
+  navigator.clipboard.writeText(number).then(() => {
+    alert('Number copied!');
+  }).catch(err => {
+    console.error('Failed to copy: ', err);
+  });
+}
+    </script>
+  </body>
+</html>
