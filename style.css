@@ -139,9 +139,9 @@ body::-webkit-scrollbar {
     display: block;
   }
 
-  .register {
-    display: none;
-  }
+ /* .register {
+    display: ;
+  } */
 }
 
 /* HERO */
