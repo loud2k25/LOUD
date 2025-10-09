@@ -174,6 +174,7 @@ body::-webkit-scrollbar {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255,255,255,0.2);
   box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  
 }
 
 /* Hero text */
@@ -380,6 +381,10 @@ body::-webkit-scrollbar {
 }
 
 
+.dark {
+  background-color: rgba(0, 0, 0, 0.411) !important;
+}
+
 .curved {
   border-radius: 25px;
 }
@@ -500,6 +505,19 @@ body::-webkit-scrollbar {
 
 @media screen and (min-width: 1200px) {
   #submission-guidelines {
-  margin-top: -13.25rem;
+  margin-top: -13.5rem;
 }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .committee-intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  .committee-intro img {
+    margin-bottom: 20px;
+  }
+  
 }
